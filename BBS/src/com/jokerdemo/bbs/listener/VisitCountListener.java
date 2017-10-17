@@ -50,7 +50,7 @@ public class VisitCountListener implements ServletContextListener {
         // TODO Auto-generated method stub
     	ServletContext sc = arg0.getServletContext();
     	String path = sc.getRealPath("/WEB-INF/classes");
-    	File file = new File(path+"/com/chinasoft/bbs/listener/visitcounts.txt");
+    	File file = new File(path+"/com/jokerdemo/bbs/listener/visitcounts.txt");
     	try {
 			BufferedReader br = new BufferedReader(new FileReader(file));
 			String countStr = br.readLine();
