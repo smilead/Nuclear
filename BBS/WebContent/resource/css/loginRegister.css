@@ -1,0 +1,81 @@
+@CHARSET "UTF-8";
+<style type="text/css">
+	.login {
+		background: white;
+		width:393px;
+		margin: auto;
+	}
+	.login-title{
+		background: #f7f7f7;
+		height: 47px;
+	}
+	.login-title-logo{
+		margin-left:15px;
+		width:49px;
+		height:47px;
+		background-size:cover;
+		float:left;
+	}
+	.login-title-text{
+		float:left;
+		padding-top: 12px;
+		padding-left: 15px;
+		font-family: inherit;
+		color: rgb(102,102,102);
+		font-size: 16px;
+	}
+	.login-bottom{
+		height: 310px;
+	}
+	.text{
+		width:354px;
+		margin: auto;
+		margin-bottom:20px;
+	}
+	.text select{
+		padding-top: 14px;
+		padding-bottom: 15px;
+	}
+	.text input{
+		width: 280px;
+		height: 42px;
+	}
+	.text-left1{
+		width:64px;
+		height: 48px;
+		float: left;
+	}
+	.text-left2{
+		width:58px;
+		height: 34px;
+		float: left;
+		border:1px solid #a9a9a9;
+		padding-top:12px;
+		padding-left: 4px;
+		font-size: 15px;
+	}
+	.login-btn{
+		width: 349px;
+		height: 48px;
+		background-color: #3f89ec;
+		color: white;
+		font-size: 16px;
+		border: 0px;
+		border-radius:6px;
+	}
+	a{
+		font-size: 14px;
+		color: #1b66c7;
+		text-decoration: none;
+	}
+	#auth{
+		width:200px;
+		float:right;
+		padding-right:30px;
+		margin-bottom: 10px;
+	}
+	#auth input{
+		width:80px;
+		
+	}
+</style>

@@ -1,0 +1,25 @@
+User用户类：
+	自动生成： uid编号， 
+	注册时填写： username账户名，  password密码，
+	完善信息时： userpic头像， pixname昵称， sex性别，age年龄，（tel手机，email邮箱），
+	其他：   exp经验值，status状态（1.正常2.封禁），level会员等级（1.普通会员2.高级会员3.超级会员），
+	
+
+
+
+Post帖子类：
+	自动生成：pid编号，
+	发帖时填写：ptitle标题，article文章，图片  picStrenclosure附件（可选），
+	提交时获得：pauthor作者（User），ptime时间，
+	其他：pageview浏览量
+	
+Comment评论类：
+	自动生成：cid编号，
+	评论时填写：content内容，图片 
+	评论后获得：cauthor评论人，ctime时间，cpost评论的帖子（Post），floor楼层
+	
+Recomment二级评论类：
+	自动生成：rid编号，
+	评论时填写：rcontent内容，
+	评论后获得：rauthor评论人，rtime时间，rcomment评论的评论（Comment），
+	
