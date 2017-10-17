@@ -1,5 +1,5 @@
-<%@page import="com.chinasoft.bbs.entity.Post"%>
-<%@page import="com.chinasoft.bbs.entity.Comment"%>
+<%@page import="com.jokerdemo.bbs.entity.Post"%>
+<%@page import="com.jokerdemo.bbs.entity.Comment"%>
 <%@page import="java.util.ArrayList" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"

@@ -40,7 +40,6 @@ public class DBUtil {
      public  Connection getConnection(){            
     	 closeConn();
     	 try {
-    		 System.out.println("try链接池");
 			return dbPool.getConnection();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
