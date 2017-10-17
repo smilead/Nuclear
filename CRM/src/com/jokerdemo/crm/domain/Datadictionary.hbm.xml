@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-12 17:23:37 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.jokerdemo.crm.domain.Datadictionary" table="datadictionary" catalog="crm">
+        <id name="ddid" type="java.lang.Integer">
+            <column name="ddid" />
+            <generator class="identity" />
+        </id>
+        <property name="ddtype" type="string">
+            <column name="ddtype" not-null="true" />
+        </property>
+        <property name="ddname" type="string">
+            <column name="ddname" not-null="true" />
+        </property>
+        <property name="ddvalue" type="java.lang.Integer">
+            <column name="ddvalue" />
+        </property>
+        <property name="editorable" type="string">
+            <column name="editorable" not-null="true" />
+        </property>
+        <set name="services" table="service" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="servicetype" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Service" />
+        </set>
+        <set name="customersForRelationshiplevel" table="customer" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="relationshiplevel" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Customer" />
+        </set>
+        <set name="customersForCredit" table="customer" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="credit" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Customer" />
+        </set>
+        <set name="customersForSatisfaction" table="customer" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="satisfaction" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Customer" />
+        </set>
+    </class>
+</hibernate-mapping>

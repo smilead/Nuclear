@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<include file="struts_contact.xml"></include>
+	<include file="struts_association.xml"></include>
+	
+		<include file="struts_user.xml"></include>
+		<include file="struts_salesMangement.xml"></include>
+		<include file="struts_customer.xml"></include>
+		<include file="struts_area.xml"></include>
+		<include file="struts_dic.xml"></include>
+		<include file="struts_offer.xml"></include>
+		
+		<include file="struts_churns.xml"></include>
+		
+		<include file="struts_pro.xml"></include>
+		<include file="struts_ware.xml"></include>
+		<include file="struts_job.xml"></include>
+	</struts>

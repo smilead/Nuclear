@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-12 17:23:37 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.jokerdemo.crm.domain.Association" table="association" catalog="crm">
+        <id name="associationid" type="java.lang.Integer">
+            <column name="associationid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="customer" class="com.jokerdemo.crm.domain.Customer" fetch="select">
+            <column name="customerid" />
+        </many-to-one>
+        <property name="associationtime" type="timestamp">
+            <column name="associationtime" length="0" />
+        </property>
+        <property name="associationplace" type="string">
+            <column name="associationplace" />
+        </property>
+        <property name="associationoutline" type="string">
+            <column name="associationoutline" />
+        </property>
+        <property name="associationremarks" type="string">
+            <column name="associationremarks" />
+        </property>
+        <property name="associationinfo" type="string">
+            <column name="associationinfo" />
+        </property>
+    </class>
+     <query name="tiange11">
+			from Association where customerid=?
+		</query>
+</hibernate-mapping>

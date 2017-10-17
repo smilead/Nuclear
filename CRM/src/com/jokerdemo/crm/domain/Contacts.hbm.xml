@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-12 17:23:37 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.jokerdemo.crm.domain.Contacts" table="contacts" catalog="crm">
+        <id name="contactsid" type="java.lang.Integer">
+            <column name="contactsid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="customer" class="com.jokerdemo.crm.domain.Customer" fetch="select">
+            <column name="customerid" />
+        </many-to-one>
+        <property name="contactsname" type="string">
+            <column name="contactsname" not-null="true" />
+        </property>
+        <property name="contactssex" type="string">
+            <column name="contactssex" />
+        </property>
+        <property name="contactsjob" type="string">
+            <column name="contactsjob" />
+        </property>
+        <property name="contactsphone" type="string">
+            <column name="contactsphone" />
+        </property>
+        <property name="contactsbirthday" type="date">
+            <column name="contactsbirthday" length="0" />
+        </property>
+        <property name="contactsremarks" type="string">
+            <column name="contactsremarks" />
+        </property>
+    </class>
+    <query name="tiange">
+			from Contacts where customerid=?
+		</query>
+</hibernate-mapping>

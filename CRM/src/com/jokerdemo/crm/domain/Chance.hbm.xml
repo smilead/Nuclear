@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-12 17:23:37 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.jokerdemo.crm.domain.Chance" table="chance" catalog="crm">
+        <id name="chanceid" type="java.lang.Integer">
+            <column name="chanceid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="userByCreateuserid" class="com.jokerdemo.crm.domain.User" fetch="select">
+            <column name="createuserid" />
+        </many-to-one>
+        <many-to-one name="userByAssignuserid" class="com.jokerdemo.crm.domain.User" fetch="select">
+            <column name="assignuserid" />
+        </many-to-one>
+        <many-to-one name="status" class="com.jokerdemo.crm.domain.Status" fetch="select">
+            <column name="chancestatus" not-null="true" />
+            <column name="statustype" />
+        </many-to-one>
+        <property name="source" type="string">
+            <column name="source" />
+        </property>
+        <property name="customername" type="string">
+            <column name="customername" />
+        </property>
+        <property name="odds" type="int">
+            <column name="odds" not-null="true" />
+        </property>
+        <property name="outline" type="string">
+            <column name="outline" not-null="true" />
+        </property>
+        <property name="contactsname" type="string">
+            <column name="contactsname" not-null="true" />
+        </property>
+        <property name="contactsphone" type="string">
+            <column name="contactsphone" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" not-null="true" />
+        </property>
+        <property name="createtime" type="timestamp">
+            <column name="createtime" length="0" />
+        </property>
+        <property name="assigntime" type="timestamp">
+            <column name="assigntime" length="0" />
+        </property>
+        <set name="plans" table="plan" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="chanceid" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Plan" />
+        </set>
+    </class>
+</hibernate-mapping>

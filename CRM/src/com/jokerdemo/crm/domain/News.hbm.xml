@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-12 17:23:37 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.jokerdemo.crm.domain.News" table="news" catalog="crm">
+        <id name="newsid" type="java.lang.Integer">
+            <column name="newsid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="user" class="com.jokerdemo.crm.domain.User" fetch="select">
+            <column name="newsauthorid" />
+        </many-to-one>
+        <property name="newsname" type="string">
+            <column name="newsname" />
+        </property>
+        <property name="newstitle" type="string">
+            <column name="newstitle" />
+        </property>
+        <property name="issuetime" type="timestamp">
+            <column name="issuetime" length="0" />
+        </property>
+        <property name="newscontent" type="string">
+            <column name="newscontent" />
+        </property>
+        <property name="newsfrom" type="string">
+            <column name="newsfrom" />
+        </property>
+    </class>
+</hibernate-mapping>

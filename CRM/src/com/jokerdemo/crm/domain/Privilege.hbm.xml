@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-12 17:23:37 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.jokerdemo.crm.domain.Privilege" table="privilege" catalog="crm">
+        <id name="privilegeid" type="java.lang.Integer">
+            <column name="privilegeid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="privilege" class="com.jokerdemo.crm.domain.Privilege" fetch="select">
+            <column name="superpeivilegeid" />
+        </many-to-one>
+        <property name="privilegename" type="string">
+            <column name="privilegename" />
+        </property>
+        <property name="privilegetype" type="string">
+            <column name="privilegetype" />
+        </property>
+        <property name="privilegeaddress" type="string">
+            <column name="privilegeaddress" />
+        </property>
+        <property name="privilegecode" type="string">
+            <column name="privilegecode" />
+        </property>
+        <set name="privileges" table="privilege" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="superpeivilegeid" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Privilege" />
+        </set>
+        <set name="jobprivaleges" table="jobprivalege" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="privalegeid" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Jobprivalege" />
+        </set>
+    </class>
+</hibernate-mapping>

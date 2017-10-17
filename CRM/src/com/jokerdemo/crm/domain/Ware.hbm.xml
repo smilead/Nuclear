@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-12 17:23:37 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.jokerdemo.crm.domain.Ware" table="ware" catalog="crm">
+        <id name="wareid" type="int">
+            <column name="wareid" />
+            <generator class="assigned" />
+        </id>
+        <property name="wareproduct" type="string">
+            <column name="wareproduct" />
+        </property>
+        <property name="ware" type="string">
+            <column name="ware" />
+        </property>
+        <property name="warest" type="string">
+            <column name="warest" />
+        </property>
+        <property name="productnum" type="java.lang.Integer">
+            <column name="productnum" />
+        </property>
+        <property name="wareoutline" type="string">
+            <column name="wareoutline" />
+        </property>
+    </class>
+</hibernate-mapping>

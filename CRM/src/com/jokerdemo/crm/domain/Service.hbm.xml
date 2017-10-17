@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-12 17:23:37 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.jokerdemo.crm.domain.Service" table="service" catalog="crm">
+        <id name="serviceid" type="int">
+            <column name="serviceid" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="userByCreateuserid" class="com.jokerdemo.crm.domain.User" fetch="select">
+            <column name="createuserid" />
+        </many-to-one>
+        <many-to-one name="userByAssignuserid" class="com.jokerdemo.crm.domain.User" fetch="select">
+            <column name="assignuserid" />
+        </many-to-one>
+        <many-to-one name="userByDisposeuserid" class="com.jokerdemo.crm.domain.User" fetch="select">
+            <column name="disposeuserid" />
+        </many-to-one>
+        <many-to-one name="datadictionary" class="com.jokerdemo.crm.domain.Datadictionary" fetch="select">
+            <column name="servicetype" />
+        </many-to-one>
+        <many-to-one name="customer" class="com.jokerdemo.crm.domain.Customer" fetch="select">
+            <column name="customerid" />
+        </many-to-one>
+        <many-to-one name="status" class="com.jokerdemo.crm.domain.Status" fetch="select">
+            <column name="servicestatus" />
+            <column name="statustype" />
+        </many-to-one>
+        <property name="serviceoutline" type="string">
+            <column name="serviceoutline" />
+        </property>
+        <property name="servicerequest" type="string">
+            <column name="servicerequest" />
+        </property>
+        <property name="createtime" type="timestamp">
+            <column name="createtime" length="0" />
+        </property>
+        <property name="serviceresponse" type="string">
+            <column name="serviceresponse" />
+        </property>
+        <property name="assigntime" type="timestamp">
+            <column name="assigntime" length="0" />
+        </property>
+        <property name="serviceresult" type="string">
+            <column name="serviceresult" />
+        </property>
+        <property name="satisfaction" type="java.lang.Integer">
+            <column name="satisfaction" />
+        </property>
+        <property name="disposetime" type="timestamp">
+            <column name="disposetime" length="0" />
+        </property>
+    </class>
+</hibernate-mapping>

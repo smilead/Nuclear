@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-12 17:23:37 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.jokerdemo.crm.domain.Product" table="product" catalog="crm">
+        <id name="productid" type="java.lang.Integer">
+            <column name="productid" />
+            <generator class="identity" />
+        </id>
+        <property name="productname" type="string">
+            <column name="productname" />
+        </property>
+        <property name="productprice" type="java.lang.Double">
+            <column name="productprice" precision="22" scale="0" />
+        </property>
+        <property name="productunit" type="string">
+            <column name="productunit" />
+        </property>
+        <property name="producttype" type="string">
+            <column name="producttype" />
+        </property>
+        <property name="productonce" type="string">
+            <column name="productonce" />
+        </property>
+        <property name="productoutline" type="string">
+            <column name="productoutline" />
+        </property>
+        <set name="productinfos" table="productinfo" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="productid" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Productinfo" />
+        </set>
+    </class>
+</hibernate-mapping>

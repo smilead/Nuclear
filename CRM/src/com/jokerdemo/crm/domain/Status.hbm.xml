@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-12 17:23:37 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.jokerdemo.crm.domain.Status" table="status" catalog="crm">
+        <composite-id name="id" class="com.jokerdemo.crm.domain.StatusId">
+            <key-property name="statusid" type="int">
+                <column name="statusid" />
+            </key-property>
+            <key-property name="statuestype" type="int">
+                <column name="statuestype" />
+            </key-property>
+        </composite-id>
+        <property name="statusvalue" type="string">
+            <column name="statusvalue" not-null="true" />
+        </property>
+        <set name="chances" table="chance" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="chancestatus" not-null="true" />
+                <column name="statustype" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Chance" />
+        </set>
+        <set name="services" table="service" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="servicestatus" />
+                <column name="statustype" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Service" />
+        </set>
+        <set name="offers" table="offer" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="offerstatus" />
+                <column name="statustype" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Offer" />
+        </set>
+        <set name="orders" table="order" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="orderstatus" />
+                <column name="statustype" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Order" />
+        </set>
+        <set name="churnses" table="churns" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="churnstatus" />
+                <column name="statustype" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Churns" />
+        </set>
+        <set name="plans" table="plan" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="planstatus" not-null="true" />
+                <column name="statustype" not-null="true" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Plan" />
+        </set>
+    </class>
+</hibernate-mapping>

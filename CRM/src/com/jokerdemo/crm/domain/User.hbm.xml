@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-12 17:23:37 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.jokerdemo.crm.domain.User" table="user" catalog="crm">
+        <id name="userid" type="java.lang.Integer">
+            <column name="userid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="job" class="com.jokerdemo.crm.domain.Job" fetch="select">
+            <column name="jobno" />
+        </many-to-one>
+        <property name="username" type="string">
+            <column name="username" />
+        </property>
+        <property name="usersex" type="string">
+            <column name="usersex" />
+        </property>
+        <property name="phone" type="string">
+            <column name="phone" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" />
+        </property>
+        <property name="birthday" type="string">
+            <column name="birthday" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" />
+        </property>
+        <property name="entrytime" type="date">
+            <column name="entrytime" length="0" />
+        </property>
+        <set name="chancesForAssignuserid" table="chance" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="assignuserid" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Chance" />
+        </set>
+        <set name="slideshows" table="slideshow" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="uploderid" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Slideshow" />
+        </set>
+        <set name="offers" table="offer" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Offer" />
+        </set>
+        <set name="servicesForCreateuserid" table="service" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="createuserid" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Service" />
+        </set>
+        <set name="servicesForAssignuserid" table="service" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="assignuserid" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Service" />
+        </set>
+        <set name="servicesForDisposeuserid" table="service" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="disposeuserid" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Service" />
+        </set>
+        <set name="chancesForCreateuserid" table="chance" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="createuserid" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Chance" />
+        </set>
+        <set name="customers" table="customer" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Customer" />
+        </set>
+        <set name="newses" table="news" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="newsauthorid" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.News" />
+        </set>
+    </class>
+</hibernate-mapping>

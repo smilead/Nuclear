@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="salesManagement" namespace="/salesManagement" extends="json-default">
+		<action name="ManageSaleOpportunity_*" class="salesManagementAction" method="{1}">
+				<result name="assignReady">AssignSaleOpportunity.jsp</result>
+				<result name="success">ManageSaleOpportunity.jsp</result>
+				<result name="delete">ManageSaleOpportunity.jsp</result>
+				<result name="error">error.jsp</result>
+				<result name="assignChance">ManageSaleOpportunity.jsp</result>
+				<result name="new">NewSaleOpportunity.jsp</result>
+				<result name="compileSaleOpportunity">CompileSaleOpportunity.jsp</result>
+				<result name="updateChance">ManageSaleOpportunity.jsp</result>
+		</action>
+		<action name="salesManagementSearch" class="salesManagementAction" method="searchChance">
+			<result type="json">
+				<param name="root">pageModel</param>
+			</result>
+		</action>
+		
+		
+	
+	</package>
+</struts>

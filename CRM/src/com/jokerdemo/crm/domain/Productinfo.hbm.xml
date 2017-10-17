@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-12 17:23:37 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.jokerdemo.crm.domain.Productinfo" table="productinfo" catalog="crm">
+        <id name="productinfoid" type="java.lang.Integer">
+            <column name="productinfoid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="order" class="com.jokerdemo.crm.domain.Order" fetch="select">
+            <column name="orderid" />
+        </many-to-one>
+        <many-to-one name="product" class="com.jokerdemo.crm.domain.Product" fetch="select">
+            <column name="productid" />
+        </many-to-one>
+        <property name="productcount" type="java.lang.Integer">
+            <column name="productcount" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-12 17:23:37 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.jokerdemo.crm.domain.Slideshow" table="slideshow" catalog="crm">
+        <id name="slideshowid" type="java.lang.Integer">
+            <column name="slideshowid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="user" class="com.jokerdemo.crm.domain.User" fetch="select">
+            <column name="uploderid" />
+        </many-to-one>
+        <property name="slideshowname" type="string">
+            <column name="slideshowname" />
+        </property>
+    </class>
+</hibernate-mapping>

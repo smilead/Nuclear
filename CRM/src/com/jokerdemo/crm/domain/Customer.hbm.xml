@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-12 17:23:37 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.jokerdemo.crm.domain.Customer" table="customer" catalog="crm">
+        <id name="cuostomerid" type="string">
+            <column name="cuostomerid" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="datadictionaryByRelationshiplevel" class="com.jokerdemo.crm.domain.Datadictionary" fetch="select">
+            <column name="relationshiplevel" />
+        </many-to-one>
+        <many-to-one name="datadictionaryByCredit" class="com.jokerdemo.crm.domain.Datadictionary" fetch="select">
+            <column name="credit" />
+        </many-to-one>
+        <many-to-one name="area" class="com.jokerdemo.crm.domain.Area" fetch="select">
+            <column name="areaid" />
+        </many-to-one>
+        <many-to-one name="datadictionaryBySatisfaction" class="com.jokerdemo.crm.domain.Datadictionary" fetch="select">
+            <column name="satisfaction" />
+        </many-to-one>
+        <many-to-one name="user" class="com.jokerdemo.crm.domain.User" fetch="select">
+            <column name="userid" />
+        </many-to-one>
+        <property name="company" type="string">
+            <column name="company" not-null="true" />
+        </property>
+        <property name="createtime" type="timestamp">
+            <column name="createtime" length="0" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" />
+        </property>
+        <property name="postalcode" type="java.lang.Integer">
+            <column name="postalcode" />
+        </property>
+        <property name="phone" type="string">
+            <column name="phone" />
+        </property>
+        <property name="fax" type="string">
+            <column name="fax" />
+        </property>
+        <property name="url" type="string">
+            <column name="url" />
+        </property>
+        <property name="licenseno" type="string">
+            <column name="licenseno" />
+        </property>
+        <property name="corporation" type="string">
+            <column name="corporation" />
+        </property>
+        <property name="capital" type="java.lang.Double">
+            <column name="capital" precision="22" scale="0" />
+        </property>
+        <property name="turnover" type="java.lang.Double">
+            <column name="turnover" precision="22" scale="0" />
+        </property>
+        <property name="bank" type="string">
+            <column name="bank" />
+        </property>
+        <property name="bankaccount" type="string">
+            <column name="bankaccount" />
+        </property>
+        <property name="landtax" type="string">
+            <column name="landtax" />
+        </property>
+        <property name="nationaltax" type="string">
+            <column name="nationaltax" />
+        </property>
+        <property name="customerstatus" type="java.lang.Integer">
+            <column name="customerstatus" />
+        </property>
+        <set name="services" table="service" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="customerid" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Service" />
+        </set>
+        <set name="orders" table="order" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="customerid" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Order" />
+        </set>
+        <set name="contactses" table="contacts" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="customerid" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Contacts" />
+        </set>
+        <set name="churnses" table="churns" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="customerid" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Churns" />
+        </set>
+        <set name="associations" table="association" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="customerid" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Association" />
+        </set>
+    </class>
+</hibernate-mapping>

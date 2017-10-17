@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-12 17:23:37 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.jokerdemo.crm.domain.System" table="system" catalog="crm">
+        <id name="columeid" type="java.lang.Integer">
+            <column name="columeid" />
+            <generator class="identity" />
+        </id>
+        <property name="columename" type="string">
+            <column name="columename" />
+        </property>
+        <property name="columevalue" type="string">
+            <column name="columevalue" />
+        </property>
+    </class>
+</hibernate-mapping>

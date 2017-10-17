@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- 引入外部属性文件 -->
+	<context:property-placeholder location="classpath:jdbc.properties"/>
+
+	<!-- 配置c3p0连接池 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${jdbc.driver}"></property>
+		<property name="jdbcUrl" value="${jdbc.url}"></property>
+		<property name="user" value="${jdbc.user}"></property>
+		<property name="password" value="${jdbc.password}"></property>
+	</bean>
+
+	<!-- 配置属性和映射文件-->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+			<property name="dataSource" ref="dataSource"></property>
+			<property name="hibernateProperties">
+				<props>
+					<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+					<prop key="hibernate.show_sql">true</prop>
+					<prop key="hibernate.format_sql">false</prop>
+					<prop key="hibernate.connection.autocommit">false</prop>
+					<prop key="hibernate.hbm2ddl.auto">update</prop>
+					<prop key="hibernate.show_sql">true</prop>
+				</props>
+			</property>
+			<property name="mappingResources">
+				<list>
+					  <value>com/jokerdemo/crm/domain/Churns.hbm.xml</value>
+					  <value>com/jokerdemo/crm/domain/Productinfo.hbm.xml</value>
+					  <value>com/jokerdemo/crm/domain/Product.hbm.xml</value>
+					  <value>com/jokerdemo/crm/domain/Datadictionary.hbm.xml</value>
+					  <value>com/jokerdemo/crm/domain/News.hbm.xml</value>
+					  <value>com/jokerdemo/crm/domain/Privilege.hbm.xml</value>
+					  <value>com/jokerdemo/crm/domain/Jobprivalege.hbm.xml</value>
+					  <value>com/jokerdemo/crm/domain/Defer.hbm.xml</value>
+					  <value>com/jokerdemo/crm/domain/Area.hbm.xml</value>
+					  <value>com/jokerdemo/crm/domain/User.hbm.xml</value>
+					  <value>com/jokerdemo/crm/domain/Order.hbm.xml</value>
+					  <value>com/jokerdemo/crm/domain/Association.hbm.xml</value>
+					  <value>com/jokerdemo/crm/domain/Customer.hbm.xml</value>
+					  <value>com/jokerdemo/crm/domain/Plan.hbm.xml</value>
+					  <value>com/jokerdemo/crm/domain/Contacts.hbm.xml</value>
+					  <value>com/jokerdemo/crm/domain/System.hbm.xml</value>
+					  <value>com/jokerdemo/crm/domain/Chance.hbm.xml</value>
+					  <value>com/jokerdemo/crm/domain/Service.hbm.xml</value>
+					  <value>com/jokerdemo/crm/domain/Job.hbm.xml</value>
+					  <value>com/jokerdemo/crm/domain/Offer.hbm.xml</value>
+					  <value>com/jokerdemo/crm/domain/Slideshow.hbm.xml</value>
+					  <value>com/jokerdemo/crm/domain/Status.hbm.xml</value>
+					  <value>com/jokerdemo/crm/domain/Ware.hbm.xml</value>
+				</list>			
+			</property>
+	</bean>
+	<!--spring管理事务  -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager" >
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- 注解方式开启事务 -->
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	<import resource="applicationContext_user.xml"/>
+	<import resource="applicationContext_salesManagement.xml"/>
+	<import resource="applicationContext_customer.xml"/>
+	<import resource="applicationContext_area.xml"/>
+	<import resource="applicationContext_datadictionary.xml"/>
+	<import resource="applicationContext_offer.xml"/>
+	<import resource="applicationContext_contacts.xml"/>
+	<import resource="applicationContext_association.xml"/>
+	<import resource="applicationContext_pro.xml"/>
+	<import resource="applicationContext_ware.xml"/>
+	<import resource="applicationContext_job.xml"/>
+	<import resource="applicationContext_jobprivalege.xml"/>
+	<import resource="applicationContext_churns.xml"/>
+	
+</beans>

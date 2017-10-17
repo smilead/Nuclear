@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-12 17:23:37 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.jokerdemo.crm.domain.Churns" table="churns" catalog="crm">
+        <id name="churnid" type="java.lang.Integer">
+            <column name="churnid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="status" class="com.jokerdemo.crm.domain.Status" fetch="select">
+            <column name="churnstatus" />
+            <column name="statustype" />
+        </many-to-one>
+        <many-to-one name="customer" class="com.jokerdemo.crm.domain.Customer" fetch="select">
+            <column name="customerid" />
+        </many-to-one>
+        <set name="defers" table="defer" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="churnsid" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Defer" />
+        </set>
+    </class>
+</hibernate-mapping>

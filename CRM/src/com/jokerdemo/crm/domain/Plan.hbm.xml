@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-12 17:23:37 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.jokerdemo.crm.domain.Plan" table="plan" catalog="crm">
+        <id name="planid" type="java.lang.Integer">
+            <column name="planid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="status" class="com.jokerdemo.crm.domain.Status" fetch="select">
+            <column name="planstatus" not-null="true" />
+            <column name="statustype" not-null="true" />
+        </many-to-one>
+        <many-to-one name="chance" class="com.jokerdemo.crm.domain.Chance" fetch="select">
+            <column name="chanceid" />
+        </many-to-one>
+        <property name="plancontent" type="string">
+            <column name="plancontent" />
+        </property>
+        <property name="plantime" type="timestamp">
+            <column name="plantime" length="0" not-null="true" />
+        </property>
+        <property name="planback" type="string">
+            <column name="planback" />
+        </property>
+    </class>
+</hibernate-mapping>

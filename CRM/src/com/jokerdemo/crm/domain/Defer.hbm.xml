@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-12 17:23:37 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.jokerdemo.crm.domain.Defer" table="defer" catalog="crm">
+        <id name="deferid" type="int">
+            <column name="deferid" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="churns" class="com.jokerdemo.crm.domain.Churns" fetch="select">
+            <column name="churnsid" />
+        </many-to-one>
+        <property name="deferstep" type="string">
+            <column name="deferstep" />
+        </property>
+        <property name="defercontent" type="string">
+            <column name="defercontent" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-12 17:23:37 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.jokerdemo.crm.domain.Offer" table="offer" catalog="crm">
+        <id name="offerid" type="int">
+            <column name="offerid" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="status" class="com.jokerdemo.crm.domain.Status" fetch="select">
+            <column name="offerstatus" />
+            <column name="statustype" />
+        </many-to-one>
+        <many-to-one name="user" class="com.jokerdemo.crm.domain.User" fetch="select">
+            <column name="userid" />
+        </many-to-one>
+        <property name="productoffer" type="java.lang.Double">
+            <column name="productoffer" precision="22" scale="0" />
+        </property>
+        <property name="actualizeoffer" type="java.lang.Double">
+            <column name="actualizeoffer" precision="22" scale="0" />
+        </property>
+        <property name="pmoffer" type="java.lang.Double">
+            <column name="pmoffer" precision="22" scale="0" />
+        </property>
+        <property name="ssoffer" type="java.lang.Double">
+            <column name="ssoffer" precision="22" scale="0" />
+        </property>
+        <property name="paloffer" type="java.lang.Double">
+            <column name="paloffer" precision="22" scale="0" />
+        </property>
+        <property name="totaloffer" type="java.lang.Double">
+            <column name="totaloffer" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="default" namespace="/webContent/custManagement" extends="struts-default">
+		
+		<action name="contactA" class="contactsAction" >
+			<result name="tiange11" >/custManagement/linkman.jsp</result>
+			<result name="tian" >/custManagement/newContacts.jsp</result>
+			<result name="add" >/custManagement/newContacts.jsp</result>
+			<result name="com">/custManagement/newContacts.jsp</result>
+			<result name="xiaotian">/custManagement/editContacts.jsp</result>
+			<result name="xxtian" >/custManagement/linkman.jsp</result>
+			
+		</action>
+	</package>
+</struts>

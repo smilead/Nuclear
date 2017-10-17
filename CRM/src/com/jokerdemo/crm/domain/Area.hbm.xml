@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-12 17:23:37 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.jokerdemo.crm.domain.Area" table="area" catalog="crm">
+        <id name="areaid" type="int">
+            <column name="areaid" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="area" class="com.jokerdemo.crm.domain.Area" lazy="false" fetch="select">
+            <column name="pid">
+                <comment>1.&#178;&#233;&#202;&#161; SELECT * FROM china WHERE pid=0 2.&#178;&#233;&#202;&#208; SELECT * FROM chinaWHERE pid=330000 3.&#178;&#233;&#199;&#248;
+                SELECT * FROM china WHERE pid = 330100</comment>
+            </column>
+        </many-to-one>
+        <property name="aname" type="string">
+            <column name="aname" length="40" />
+        </property>
+        <set name="areas" table="area" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="pid">
+                    <comment>1.&#178;&#233;&#202;&#161; SELECT * FROM china WHERE pid=0 2.&#178;&#233;&#202;&#208; SELECT * FROM chinaWHERE pid=330000 3.&#178;&#233;&#199;&#248;
+                    SELECT * FROM china WHERE pid = 330100</comment>
+                </column>
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Area" />
+        </set>
+        <set name="customers" table="customer" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="areaid" />
+            </key>
+            <one-to-many class="com.jokerdemo.crm.domain.Customer" />
+        </set>
+    </class>
+</hibernate-mapping>
