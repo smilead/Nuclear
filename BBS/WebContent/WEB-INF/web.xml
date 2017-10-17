@@ -8,7 +8,7 @@
   <filter>
     <display-name>EncodingFilter</display-name>
     <filter-name>EncodingFilter</filter-name>
-    <filter-class>com.chinasoft.bbs.filter.EncodingFilter</filter-class>
+    <filter-class>com.jokerdemo.bbs.filter.EncodingFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>EncodingFilter</filter-name>
@@ -18,7 +18,7 @@
     <description></description>
     <display-name>AddPost</display-name>
     <servlet-name>AddPost</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.post.AddPost</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.post.AddPost</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AddPost</servlet-name>
@@ -28,21 +28,21 @@
     <description></description>
     <display-name>LoginServlet</display-name>
     <servlet-name>LoginServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.LoginServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.LoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
     <url-pattern>/LoginServlet</url-pattern>
   </servlet-mapping>
   <listener>
-    <listener-class>com.chinasoft.bbs.listener.VisitCountListener</listener-class>
+    <listener-class>com.jokerdemo.bbs.listener.VisitCountListener</listener-class>
   </listener>
 
   <servlet>
     <description></description>
     <display-name>AuthImgServlet</display-name>
     <servlet-name>AuthImgServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.AuthImgServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.AuthImgServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AuthImgServlet</servlet-name>
@@ -52,7 +52,7 @@
     <description></description>
     <display-name>CheckVarcodeServlet</display-name>
     <servlet-name>CheckVarcodeServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.CheckVarcodeServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.CheckVarcodeServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CheckVarcodeServlet</servlet-name>
@@ -62,7 +62,7 @@
     <description></description>
     <display-name>IndexInitServlet</display-name>
     <servlet-name>IndexInitServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.IndexInitServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.IndexInitServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>IndexInitServlet</servlet-name>
@@ -72,7 +72,7 @@
     <description></description>
     <display-name>CheckUsernameServlet</display-name>
     <servlet-name>CheckUsernameServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.CheckUsernameServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.CheckUsernameServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CheckUsernameServlet</servlet-name>
@@ -82,7 +82,7 @@
     <description></description>
     <display-name>RegisterServlet</display-name>
     <servlet-name>RegisterServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.RegisterServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.RegisterServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>RegisterServlet</servlet-name>
@@ -92,7 +92,7 @@
     <description></description>
     <display-name>ShowQuestionServlet</display-name>
     <servlet-name>ShowQuestionServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.ShowQuestionServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.ShowQuestionServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ShowQuestionServlet</servlet-name>
@@ -102,7 +102,7 @@
     <description></description>
     <display-name>ShowUserServlet</display-name>
     <servlet-name>ShowUserServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.ShowUserServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.ShowUserServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ShowUserServlet</servlet-name>
@@ -112,7 +112,7 @@
     <description></description>
     <display-name>PreCheckPost</display-name>
     <servlet-name>PreCheckPost</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.PreCheckPost</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.PreCheckPost</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>PreCheckPost</servlet-name>
@@ -122,7 +122,7 @@
     <description></description>
     <display-name>ShowOnePostServlet</display-name>
     <servlet-name>ShowOnePostServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.ShowOnePostServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.ShowOnePostServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ShowOnePostServlet</servlet-name>
@@ -132,7 +132,7 @@
     <description></description>
     <display-name>ShowUpdatePswdServlet</display-name>
     <servlet-name>ShowUpdatePswdServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.ShowUpdatePswdServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.ShowUpdatePswdServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ShowUpdatePswdServlet</servlet-name>
@@ -142,7 +142,7 @@
     <description></description>
     <display-name>UpdatePswdServlet</display-name>
     <servlet-name>UpdatePswdServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.UpdatePswdServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.UpdatePswdServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>UpdatePswdServlet</servlet-name>
@@ -152,7 +152,7 @@
     <description></description>
     <display-name>PostsSelectOrderByServlet</display-name>
     <servlet-name>PostsSelectOrderByServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.post.PostsSelectOrderByServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.post.PostsSelectOrderByServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>PostsSelectOrderByServlet</servlet-name>
@@ -162,7 +162,7 @@
     <description></description>
     <display-name>FindAllUsersServlet</display-name>
     <servlet-name>FindAllUsersServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.FindAllUsersServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.FindAllUsersServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>FindAllUsersServlet</servlet-name>
@@ -172,7 +172,7 @@
     <description></description>
     <display-name>ChangeStatusServlet</display-name>
     <servlet-name>ChangeStatusServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.ChangeStatusServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.ChangeStatusServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ChangeStatusServlet</servlet-name>
@@ -182,7 +182,7 @@
     <description></description>
     <display-name>FindUserLikeServlet</display-name>
     <servlet-name>FindUserLikeServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.FindUserLikeServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.FindUserLikeServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>FindUserLikeServlet</servlet-name>
@@ -192,7 +192,7 @@
     <description></description>
     <display-name>PostsServletManager</display-name>
     <servlet-name>PostsServletManager</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.post.PostsServletManager</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.post.PostsServletManager</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>PostsServletManager</servlet-name>
@@ -202,7 +202,7 @@
     <description></description>
     <display-name>PostsSelectByValue</display-name>
     <servlet-name>PostsSelectByValue</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.post.PostsSelectByValue</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.post.PostsSelectByValue</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>PostsSelectByValue</servlet-name>
@@ -212,7 +212,7 @@
     <description></description>
     <display-name>PostsSelectRecently</display-name>
     <servlet-name>PostsSelectRecently</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.post.PostsSelectRecently</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.post.PostsSelectRecently</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>PostsSelectRecently</servlet-name>
@@ -222,7 +222,7 @@
     <description></description>
     <display-name>PostsSelectBetweenTime</display-name>
     <servlet-name>PostsSelectBetweenTime</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.post.PostsSelectBetweenTime</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.post.PostsSelectBetweenTime</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>PostsSelectBetweenTime</servlet-name>
@@ -232,7 +232,7 @@
     <description></description>
     <display-name>PostsSelectBetweenPageview</display-name>
     <servlet-name>PostsSelectBetweenPageview</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.post.PostsSelectBetweenPageview</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.post.PostsSelectBetweenPageview</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>PostsSelectBetweenPageview</servlet-name>
@@ -242,7 +242,7 @@
     <description></description>
     <display-name>PostsSelectVaguePtitle</display-name>
     <servlet-name>PostsSelectVaguePtitle</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.post.PostsSelectVaguePtitle</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.post.PostsSelectVaguePtitle</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>PostsSelectVaguePtitle</servlet-name>
@@ -252,7 +252,7 @@
     <description></description>
     <display-name>PostsSelectVagueArticle</display-name>
     <servlet-name>PostsSelectVagueArticle</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.post.PostsSelectVagueArticle</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.post.PostsSelectVagueArticle</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>PostsSelectVagueArticle</servlet-name>
@@ -262,7 +262,7 @@
     <description></description>
     <display-name>PostingServlet</display-name>
     <servlet-name>PostingServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.PostingServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.PostingServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>PostingServlet</servlet-name>
@@ -272,7 +272,7 @@
     <description></description>
     <display-name>UploadImgServlet</display-name>
     <servlet-name>UploadImgServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.UploadImgServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.UploadImgServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>UploadImgServlet</servlet-name>
@@ -282,7 +282,7 @@
     <description></description>
     <display-name>AdminIndexServlet</display-name>
     <servlet-name>AdminIndexServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.AdminIndexServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.AdminIndexServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AdminIndexServlet</servlet-name>
@@ -292,7 +292,7 @@
     <description></description>
     <display-name>UpdateUserServlet</display-name>
     <servlet-name>UpdateUserServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.UpdateUserServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.UpdateUserServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>UpdateUserServlet</servlet-name>
@@ -302,7 +302,7 @@
     <description></description>
     <display-name>UpdatePhotoServlet</display-name>
     <servlet-name>UpdatePhotoServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.UpdatePhotoServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.UpdatePhotoServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>UpdatePhotoServlet</servlet-name>
@@ -312,7 +312,7 @@
     <description></description>
     <display-name>CheckPasswordServlet</display-name>
     <servlet-name>CheckPasswordServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.CheckPasswordServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.CheckPasswordServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CheckPasswordServlet</servlet-name>
@@ -322,7 +322,7 @@
     <description></description>
     <display-name>ShowOneUserServlet</display-name>
     <servlet-name>ShowOneUserServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.ShowOneUserServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.ShowOneUserServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ShowOneUserServlet</servlet-name>
@@ -331,7 +331,7 @@
   <filter>
     <display-name>LoginFilter</display-name>
     <filter-name>LoginFilter</filter-name>
-    <filter-class>com.chinasoft.bbs.filter.LoginFilter</filter-class>
+    <filter-class>com.jokerdemo.bbs.filter.LoginFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>LoginFilter</filter-name>
@@ -341,7 +341,7 @@
     <description></description>
     <display-name>PostsSelectVagueServlet</display-name>
     <servlet-name>PostsSelectVagueServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.post.PostsSelectVagueServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.post.PostsSelectVagueServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>PostsSelectVagueServlet</servlet-name>
@@ -351,7 +351,7 @@
     <description></description>
     <display-name>PostsSelectVague</display-name>
     <servlet-name>PostsSelectVague</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.post.PostsSelectVague</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.post.PostsSelectVague</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>PostsSelectVague</servlet-name>
@@ -361,7 +361,7 @@
     <description></description>
     <display-name>RecommentAddServlet</display-name>
     <servlet-name>RecommentAddServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.RecommentAddServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.RecommentAddServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>RecommentAddServlet</servlet-name>
@@ -370,7 +370,7 @@
   <filter>
     <display-name>AdminLoginServlet</display-name>
     <filter-name>AdminLoginServlet</filter-name>
-    <filter-class>com.chinasoft.bbs.filter.AdminLoginServlet</filter-class>
+    <filter-class>com.jokerdemo.bbs.filter.AdminLoginServlet</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>AdminLoginServlet</filter-name>
@@ -380,7 +380,7 @@
     <description></description>
     <display-name>DeleteSessionServlet</display-name>
     <servlet-name>DeleteSessionServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.DeleteSessionServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.DeleteSessionServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>DeleteSessionServlet</servlet-name>
@@ -390,7 +390,7 @@
     <description></description>
     <display-name>AddCommentServlet</display-name>
     <servlet-name>AddCommentServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.AddCommentServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.AddCommentServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AddCommentServlet</servlet-name>
@@ -400,7 +400,7 @@
     <description></description>
     <display-name>PostLevelSetServlet</display-name>
     <servlet-name>PostLevelSetServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.post.PostLevelSetServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.post.PostLevelSetServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>PostLevelSetServlet</servlet-name>
@@ -410,7 +410,7 @@
     <description></description>
     <display-name>PostCompetitiveSetServlet</display-name>
     <servlet-name>PostCompetitiveSetServlet</servlet-name>
-    <servlet-class>com.chinasoft.bbs.servlet.post.PostCompetitiveSetServlet</servlet-class>
+    <servlet-class>com.jokerdemo.bbs.servlet.post.PostCompetitiveSetServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>PostCompetitiveSetServlet</servlet-name>
