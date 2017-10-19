@@ -81,7 +81,7 @@ public class CommentDaoImpl implements CommentDao{
 		return comments;
 	}
 	public CommentPage selectCommentPage(String sel, Object obj, int currentPage, int pageSize) {
-		currentPage--;
+	
 		String sql="select * from comment where "+sel+"= ? order by floor ";
 		DBUtil db=new DBUtil();
 		ArrayList<Comment> comments=new ArrayList<Comment>();

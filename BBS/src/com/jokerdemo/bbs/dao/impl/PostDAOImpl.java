@@ -113,12 +113,14 @@ public class PostDAOImpl implements PostDAO{
 				post.setPageView(rs.getInt("pageview")+1);
 				post.setLevel(rs.getInt("level"));
 				post.setType(rs.getString("type"));
-				db.closeConn();
 				return post;
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			db.closeConn();
+			
 		}
 		return null;
 	}
@@ -208,6 +210,8 @@ public class PostDAOImpl implements PostDAO{
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			db.closeConn();
 		}
 		if(miniPosts.size()==0) 
 		return null;
@@ -346,6 +350,8 @@ public class PostDAOImpl implements PostDAO{
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			db.closeConn();
 		}
 		if(miniPosts.size()==0) 
 		return null;
