@@ -42,9 +42,11 @@ public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T>{
 	@Override
 	public boolean delete(Serializable id) {
 		T t = this.get(id);
-		this.getHibernateTemplate().delete(t);
-		if(t!=null)
+		
+		if(t!=null) {
+			this.getHibernateTemplate().delete(t);
 			return true;
+		}
 		return false;
 	}
 

@@ -41,9 +41,7 @@ public class SalesManagementAction extends  ActionSupport implements ModelDriven
 
 	public String delete() {
 		System.out.println(chance.getChanceid());
-		Integer in=new Integer(44);
-		System.out.println(saleManagementService.delete(43));
-		System.out.println(saleManagementService.delete(in));
+		
 		System.out.println(saleManagementService.delete(chance.getChanceid()));
 		
 		if(saleManagementService.delete(chance.getChanceid())) {

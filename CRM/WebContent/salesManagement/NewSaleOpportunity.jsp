@@ -90,7 +90,8 @@
                     <tr>
                         <td class="td1">创建人</td>
                         <td class="td1">
-                            <input type="text" name="createMan" lay-verify="createMan" autocomplete="off" class="layui-input">
+                        	<input type="text" value="${loginer.username}" disabled="disabled">
+                            <input type="hidden" name="createMan"   value="${loginer.userid }" hlay-verify="createMan" autocomplete="off" class="layui-input">
                             <span class="tab">*</span>
                         </td>
                         <td class="td1">创建时间</td>
